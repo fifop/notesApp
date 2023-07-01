@@ -1,6 +1,4 @@
-
-
-let notes = JSON.parse(localStorage.getItem('tasks')) || [];
+const notes = JSON.parse(localStorage.getItem('tasks')) || [];
 
 const container = document.querySelector('.note-container');
 const createButton = document.querySelector('#create-button');
@@ -54,18 +52,19 @@ printNote(notes);
 
 // פונקציה למחיקת כל פתק בנפרד
 function removeNote(id){
-  const currentIndex = notes.findIndex(item => item.id=== id)
-  notes.splice(currentIndex,1)
-  printNote(notes);
-  console.log(this.id);
+  // const currentIndex = notes.findIndex(item => item.id=== id)
+  notes.forEach((item,i)=> {
+  if (item.id=== id) {
+    notes.splice(i,1)
+    printNote(notes);
+    console.log(id);
+  }
+  });
+
   
 }
 
-
-
 // function reset(){
-
-
 let btnReset = document.querySelector('#reset-button')
 btnReset.addEventListener('click',function reset() {
   let userInput = prompt('האם אתה בטוח שברצונך למחוק את כל המשימות?');
