@@ -1,0 +1,307 @@
+html {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+  
+  .header {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-container,
+  .input-container,
+  .button-container {
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+  
+  textarea {
+    width: 400px;
+    height: 150px;
+    font-weight: 700;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+::placeholder {
+    text-align: center;
+    font-size: xx-large;
+}
+
+  .text{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+  }
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .label {
+        text-align: center;
+        font-family: Verdana, sans-serif;
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: bold;
+}
+
+  
+  
+  
+  /* .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+.custom-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  z-index: -1;
+}
+
+.custom-button:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translate(-50%, -50%) scale(1.2);
+}
+
+.custom-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-button:hover {
+  background-color: #ff5722;
+}
+
+
+
+
+
+
+
+
+  .note-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    max-height: calc(100vh - 300px); 
+    /* כדי לא לתפוס את כל המסך */
+    
+  }  
+   
+  
+  .task {
+    background-image: url("img/2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    margin: 10px;
+    width: 300px; /* ערך הרוחב של הפתק */
+    height: 300px; /* ערך הגובה של הפתק */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .task .content {
+    margin-bottom: 10px;
+  }
+  
+  .task .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px; /* ערך רדיוס הפח */
+    cursor: pointer;
+  }
+
+  .bounce-in-fwd {
+	-webkit-animation: bounce-in-fwd 1.1s ease-in ;
+	        animation: bounce-in-fwd 1.1s ease-in ;
+}
+
+
+ /* * ----------------------------------------
+ * animation bounce-in-fwd
+ * ---------------------------------------- */
+ 
+ @-webkit-keyframes bounce-in-fwd {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: scale(0.7);
+              transform: scale(0.7);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: scale(0.84);
+              transform: scale(0.84);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    89% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: scale(0.95);
+              transform: scale(0.95);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes bounce-in-fwd {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: scale(0.7);
+              transform: scale(0.7);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: scale(0.84);
+              transform: scale(0.84);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    89% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: scale(0.95);
+              transform: scale(0.95);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+  
+
+
+
+
+
+
+  
+
+
+
+  

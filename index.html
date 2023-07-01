@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myNotes</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="class_note.js"></script>
+</head>
+<body>
+  <div class="flex-container">
+    
+    <header class="header"><h1>My Notes App</h1></header>
+
+    <div class="text-container">
+      <textarea id="textarea" class="text" placeholder="הכנס טקסט"></textarea>
+    </div>
+    <div class="input-container">
+      <label class ="label" for="inputDate">תאריך</label>
+      <input id="inputDate" class="input" type="date" placeholder="הכנס תאריך">
+    </div>
+    <div class="input-container">
+      <label class ="label" for="inputTime">שעה</label>
+      <input id="inputTime" class="input" type="time" placeholder="הכנס שעה">
+    </div>
+    <div class="button-container">
+      <button id="create-button" class="custom-button">Create</button> <button id="reset-button" class="custom-button">Reset</button>
+    </div>
+    <div class="note-container">
+  
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
