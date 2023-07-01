@@ -44,7 +44,7 @@ html {
   }
   
   textarea {
-    width: 400px;
+    width: 350px;
     height: 150px;
     font-weight: 700;
     font-size: x-large;
@@ -58,6 +58,8 @@ html {
   .text{
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: center;
+color:#000000a7
 
   }
   .input {
@@ -74,17 +76,6 @@ html {
         font-weight: bold;
 }
 
-  
-  
-  
-  /* .button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  } */
   
 .custom-button {
   position: relative;
@@ -127,10 +118,6 @@ html {
 .custom-button:hover {
   background-color: #ff5722;
 }
-
-
-
-
 
 
 
@@ -294,7 +281,6 @@ html {
   }
   
   
-
 
 
 
